@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
             if os.path.isdir(clone_path):
                 print("Updating: " + repo.name)
-                git.Repo(clone_path).remotes.origin.pull
+                git.Repo(clone_path).remotes.origin.pull()
             else:
                 print("Cloning: " + repo.name)
                 git.Repo.clone_from(repo.clone_url, clone_path)
